@@ -2,4 +2,143 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: url(/images/cover-image-dark.png);
+  background-attachment: fixed;
+  background-position: center;
+  display: grid;
+  gap: 20px;
+}
+
+.header{
+  display: grid;
+  gap: 40px;
+  background-image: url(/images/cover-image-dark.png);
+  
+}
+
+.header__rec {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
+  color: #FF0070;
+}
+
+.header__rec::after {
+  content:"";
+  border-bottom: 1px solid #FF0070;
+  border-right: 1px solid #FF0070;
+}
+
+.header__theme-menu-list{
+  list-style: none;
+}
+
+.header__theme-menu-button{
+  background-color: transparent;
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  text-transform: lowercase;
+  color: #FF0070;
+  border: none;
+}
+
+.header__theme-menu-button:active {
+  outline: 1px solid #fff;
+}
+
+.header__title {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 116px;
+  font-weight: 700;
+  line-height: 95.7px;
+  text-align: left;
+  color: #DB00FF;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__text {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+  color: #000028;
+}
+
+.title-decor{
+  background-color: #FF0070;
+  margin-inline: 10px;
+}
+
+.concentration {
+  display: grid;
+  gap: 20px;
+}
+
+.card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+ display: flex;
+ flex-direction: column;
+ gap: 5px;
+}
+
+.title {
+  font-family: "IBM Plex Mono",sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+  color: #FF0070;
+  margin-inline: 10px;
+}
+
+.card__title {
+  font-family: "IBM Plex Mono",sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+  color: #000028;
+}
+
+.card__text-description {
+  font-family: "IBM Plex Mono",sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  text-align: left;
+  color: #F1B2CE;
+  margin-inline: 10px;
+}
+
+ .picture__container {
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+} 
+
+.picture__content-image {
+  max-width: 355px;
+}
+
+.footer__title {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 116px;
+  font-weight: 700;
+  line-height: 95.7px;
+  text-align: left;
+  color: #DB00FF;
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
