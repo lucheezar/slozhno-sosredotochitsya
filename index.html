@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light" />
-    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/light.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
@@ -16,7 +16,7 @@
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <p class="header__rec">REC</p>
+      <p class="header__rec" aria-hidden="true">REC</p> 
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -45,8 +45,8 @@
       </nav>
       <h1 class="header__title">no focus</h1>
       <p class="header__text title-decor">
-        Что делать, когда не можешь делать ничего Или почему нам так сложно
-        сконцентрироваться, особенно когда очень надо
+        Что делать, когда не можешь делать ничего <br>
+        Или почему нам так сложно сконцентрироваться, особенно когда очень надо
       </p>
     </header>
     <script src="./scripts/script.js"></script>
@@ -64,6 +64,7 @@
               <a
                 class="card__link"
                 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7075496/"
+                target="blank"
               >
                 выяснили</a
               >, что мозгу тяжело концентрироваться даже на двух делах
@@ -132,12 +133,12 @@
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
           секунд)
         </h2>
-        <h3 class="card__title title-decor">
+        <h2 class="card__title title-decor">
           5 простых (на самом деле не очень) советов
-        </h3>
+        </h2>
         <ul class="card__list">
           <li class="card">
-            <h3 class="card__title title-decor">Представьте небо и облака</h3>
+            <h3 class="card__title title-decor recommendations-title">Представьте небо и облака</h3>
             <p class="card__text-description">
               Или листья в ручье. Тут дело в лёгкой медитации, которая помогает
               успокоиться. Ведь часто именно тревожные мысли о сложных задачах
@@ -150,7 +151,7 @@
             </p>
           </li>
           <li class="card">
-            <h3 class="card__title title-decor">Включите музыку</h3>
+            <h3 class="card__title title-decor recommendations-title">Включите музыку</h3>
             <p class="card__text-description">
               Но не любую, и не любимую. Любимая может быть связана с сильными
               положительными эмоциями, которые тоже очень сильно отвлекают.
@@ -159,19 +160,20 @@
             </p>
           </li>
           <li class="card">
-            <h3 class="card__title title-decor">Прогуляйтесь</h3>
+            <h3 class="card__title title-decor recommendations-title">Прогуляйтесь</h3>
             <p class="card__text-description">
               Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
-              показал, что созерцание природы повышает концентрацию, в то время
+              <a class="card__link" href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328"
+                target="blank">показал</a>, что созерцание природы повышает концентрацию, в то время
               как после просмотра городских пейзажей она наоборот понижается.
               Можно совместить прогулку с физическими упражнениями или бегом —
               так в мозг поступит ещё больше кислорода и он будет лучше
               работать. Но и простая двадцатиминутная прогулка — тоже отличный
-              вариант. показал
+              вариант.
             </p>
           </li>
           <li class="card">
-            <h3 class="card__title title-decor">Хорошо ешьте</h3>
+            <h3 class="card__title title-decor recommendations-title">Хорошо ешьте</h3>
             <p class="card__text-description">
               Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
               которые препятствуют резким скачкам сахара в крови. Например, с
@@ -180,7 +182,7 @@
             </p>
           </li>
           <li class="card">
-            <h3 class="card__title title-decor">Читайте</h3>
+            <h3 class="card__title title-decor recommendations-title">Читайте</h3>
             <p class="card__text-description">
               Настоящие бумажные книги. Это правда помогает с концентрацией:
               чтобы прочитать пост в соцсети, достаточно нескольких минут или
@@ -194,34 +196,34 @@
         <h3 class="card__title title-decor">А можно в картинках?</h3>
         <div class="picture__container">
         <img
-          class="picture__content-image"
+          class="picture__content-image img-sunset"
           src="./images/sunset.png"
           alt="sunset"
         />
         <img
-          class="picture__content-image"
+          class="picture__content-image img-cream"
           src="./images/ice-cream.png"
           alt="ice-cream"
         />
         <img
-          class="picture__content-image"
+          class="picture__content-image img-stape"
           src="./images/tape.png"
           alt="tape"
         />
         <img
-          class="picture__content-image"
+          class="picture__content-image img-books"
           src="./images/books.png"
           alt="books"
         />
         <img
-          class="picture__content-image"
+          class="picture__content-image img-street"
           src="./images/street.png"
           alt="street"
         />
       </div>
       </section>
     </main>
-    <footer class="footer">
-      <h4 class="footer__title"> focus</h4> </h4> </footer>
+    <footer class="footer decorated-zone">
+      <h4 class="footer__title"> focus</h4></footer>
   </body>
 </html>
