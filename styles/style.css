@@ -3,9 +3,6 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--background-color);
-  
-  display: grid;
-  gap: 30px;
 }
 
 .header {
@@ -19,7 +16,6 @@
   /* height: max(668px, 100vh); */
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 57px 137px 288px 194px;
-  
 }
 
  .decorated-zone::before {
@@ -47,8 +43,8 @@
  }
 
  .header__rec {
-  display: flex;
-  gap: 5px;
+  display: var(--display);
+  gap: 5px; 
   position: absolute;
   top: 10px;
   right: 15px;
@@ -94,23 +90,21 @@
   border: none;
   padding-inline: 10px;
 }
-/*  */
+
 .header__theme-menu-button_active {
-  outline: 1px solid #FF0070;
+  outline: 1px solid var(--decorated-color);
   outline-offset: 3px;
 }
 
 .header__theme-menu-button:focus-visible {
-  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--decorated-color); 
 }
 
-.header__theme-menu-button:focus {
-  text-decoration: under;
-  text-underline-position: under;
-}
 
 .header__theme-menu-button:hover {
-  outline: 1px solid #FF0070;
+  outline: 1px solid var(--decorated-color);
+  cursor: pointer;
 }
 
 .header__title {
@@ -132,7 +126,7 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
-  color: #000028;
+  color: var(--title-color);
   margin-block-end: 66px;
 }
 
@@ -141,6 +135,7 @@
   margin-inline: 10px;
 }
 
+/* Медиа для header */
 @media (768px <= width < 1024px) { 
   .header {
     display: grid;
@@ -171,37 +166,45 @@
 }
 
 @media (width >= 1024px) {
-  .header {
-  display: grid;
-  justify-items: start;
-  grid-template-columns: repeat(2, 1fr) 446px 76px;;
-  grid-template-rows: 59px 258px 137px 314px;
-  }
+    .header {
+    display: grid;
+    justify-items: start;
+    grid-template-columns: repeat(2, 1fr) 446px 76px;;
+    grid-template-rows: 59px 258px 137px 314px;
+    }
 
-  .header__theme-menu {
-    grid-column: 2 / 4;
-    grid-row: 1 / 1;
-    margin-inline-start: 150px;
-  }
+    .header__theme-menu {
+      grid-column: 2 / 4;
+      grid-row: 1 / 1;
+      margin-inline-start: 150px;
+    }
 
-  .header__theme-menu-list {
-    display: flex;
-    flex-direction: row;
-  }
+    .header__theme-menu-list {
+      display: flex;
+      flex-direction: row;
+    }
 
-  .header__title {
-    grid-column: 1/4;
-    grid-row: 3/3;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-inline-start: 0;
-  }
+    .header__title {
+      grid-column: 1/4;
+      grid-row: 3/3;
+      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+      margin-inline-start: 0;
+    }
   
-  .header__text {
-    grid-column: 3/5;
-    grid-row: 4/4;
-    margin-block-start: 38px;
-  }
+    .header__text {
+      grid-column: 3/5;
+      grid-row: 4/4;
+      margin-block-start: 38px;
+      margin-inline-end: 20px;
+    }
+}
 
+/*  */
+
+.content {
+  display: grid;
+  gap: 30px;
+  margin-block-start: 30px;
 }
 
 .concentration, .recommendations, .focus {
@@ -237,8 +240,18 @@
 }
 
 .card__link {
-  text-shadow: 2px 1px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
 
+.card__link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+
+.card__link:hover {
+  border-bottom: 1px solid var(--text-color);
+  cursor: pointer;
 }
 
 .title {
@@ -257,7 +270,7 @@
   font-weight: 700;
   line-height: 23.4px;
   text-align: left;
-  color: #000028;
+  color: var(--title-color);
 }
 
 .card__text-description {
@@ -291,6 +304,8 @@
 .recommendations-title {
   font-weight: 400;
 }
+
+/* медиа для секций */
 
 @media (768px <= width < 1024px) {
 
@@ -348,20 +363,20 @@
   }
 
    .card__list {
-    gap: 21px;
+    gap: 22px;
   }
 
   .recommendation > .card-title, .card__list {
     grid-column: 2/2;
     }
 
-    .recommendations-title {
-      margin-inline-start: 13px;
+  .recommendations-title {
+    margin-inline-start: 13px;
     }
 
   .picture__content {
     margin-inline: 10px;
-    margin-block-start: 62px;
+    margin-block-start: 56px;
   }
 
   .picture__container {
@@ -422,14 +437,22 @@
   .recommendations > .card__list {
     gap: 23px;
   }
-  
+
+  .recommendations > .card__title {
+    margin-inline: 5px;
+  }
+
+  .picture__content {
+      margin-block-start: 54px;
+  }
 }
+/*  */
 
 .footer {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-block-start: 10px;
+  margin-block-start: 40px;
 }
 
 .footer__title {
@@ -440,17 +463,25 @@
   text-align: left;
   color: var(--main-color);
   text-shadow: 4px 4px 0 var(--accent-color);
-  margin-block: 286px;
+  margin-block: 288px;
   margin-inline: 10px;
 }
 @media (width >= 768px) {
 
   .footer {
-    margin-block-start: 30px;
+    margin-block-start: 60px;
   }
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-block: 469px;
+    margin-block: 465px;
+  }
+}
+
+@media (width >= 1024px) {
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-block: 40vh;
   }
 }
