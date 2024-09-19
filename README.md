@@ -1,1 +1,1 @@
-git@github.com:lucheezar/slozhno-sosredotochitsya.git
+https://github.com/lucheezar/slozhno-sosredotochitsya.git
