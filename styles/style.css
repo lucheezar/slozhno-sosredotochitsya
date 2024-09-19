@@ -102,7 +102,6 @@
   border-bottom: 1px solid var(--decorated-color); 
 }
 
-
 .header__theme-menu-button:hover {
   outline: 1px solid var(--decorated-color);
   cursor: pointer;
@@ -138,6 +137,7 @@
 
 /* Медиа для header */
 @media (768px <= width < 1024px) { 
+  
   .header {
     display: grid;
     justify-items: start;
@@ -170,7 +170,7 @@
     .header {
     display: grid;
     justify-items: start;
-    grid-template-columns: repeat(2, 1fr) 446px 76px;;
+    grid-template-columns: repeat(2, 1fr) 446px 76px;
     grid-template-rows: 59px 258px 137px 314px;
     }
 
@@ -220,10 +220,6 @@
 
 .recommendations {
   margin-block-start: 23px;
-}
-
-.picture__content {
-  margin-block-start: 30px;
 }
 
 .card__list {
@@ -287,9 +283,10 @@
 .picture__content {
   display: grid;
   gap: 10px; 
+  margin-block-start: 30px;
 }
 
- .picture__container {
+.picture__container {
   display: grid;
   justify-content: center;
   gap: 10px;
@@ -454,6 +451,7 @@
   display: flex;
   justify-content: center;
   margin-block-start: 40px;
+  height: 100%;
 }
 
 .footer__title {
