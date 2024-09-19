@@ -3,6 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--background-color);
+  background-attachment: fixed;
 }
 
 .header {
@@ -10,8 +11,8 @@
   justify-items: end;
   align-items: center;
   background-image: var(--background-image);
-  background-attachment: fixed;
-  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   /* height: max(668px, 100vh); */
   grid-template-columns: 1fr 1fr 1fr 1fr;
