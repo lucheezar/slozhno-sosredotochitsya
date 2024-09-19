@@ -14,7 +14,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  /* height: max(668px, 100vh); */
+  height: max(668px, 100vh);
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 57px 137px 288px 194px;
 }
@@ -36,7 +36,7 @@
   position: absolute;
   width: 23px;
   height: 25px;
-  bottom: 20px;
+  bottom: 10px;
   left: 10px;
   z-index: 1;
   border-bottom: 1px solid var(--decorated-color);
@@ -45,7 +45,7 @@
 
  .header__rec {
   display: var(--display);
-  gap: 5px; 
+  gap: 5px;
   position: absolute;
   top: 10px;
   right: 15px;
@@ -99,7 +99,7 @@
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-bottom: 1px solid var(--decorated-color); 
+  border-bottom: 1px solid var(--decorated-color);
 }
 
 .header__theme-menu-button:hover {
@@ -136,8 +136,7 @@
 }
 
 /* Медиа для header */
-@media (768px <= width < 1024px) { 
-  
+@media (768px <= width < 1024px) {
   .header {
     display: grid;
     justify-items: start;
@@ -158,7 +157,7 @@
   }
   
   .header__text {
-    width: 364px; 
+    max-width: 364px;
     grid-column: 2/4;
     grid-row: 4/4;
     margin-inline-end: 20px;
@@ -204,25 +203,24 @@
 
 .content {
   display: grid;
-  gap: 30px;
-  margin-block-start: 30px;
+  margin-block-start: 40px;
 }
 
 .concentration, .recommendations, .focus {
   display: flex;
-  gap: 22px;
+  gap: 16px;
   flex-direction: column;
 }
 
 .focus {
-  margin-block-start: 25px;
+  margin-block-start: 48px;
 }
 
 .recommendations {
-  margin-block-start: 23px;
+  margin-block-start: 52px;
 }
 
-.card__list {
+.card__list{
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -233,7 +231,7 @@
 .card {
  display: flex;
  flex-direction: column;
- gap: 6px;
+ gap: 10px;
 }
 
 .card__link {
@@ -282,8 +280,8 @@
 
 .picture__content {
   display: grid;
-  gap: 10px; 
-  margin-block-start: 30px;
+  gap: 10px;
+  margin-block-start: 51px;
 }
 
 .picture__container {
@@ -313,7 +311,7 @@
     grid-template-columns: 200px 1fr;
     grid-template-rows: 65px 1fr;
     margin-inline: 10px;
-    margin-block-start: 55px;
+    margin-block-start: 74px;
   }
 
   .focus> .title {
@@ -346,8 +344,9 @@
   .concentration {
     display: grid;
     grid-template-columns: 31% 1fr;
+    column-gap: 24px;
     margin-inline: 10px;
-    margin-block-start: 30px;
+    margin-block-start: 17px;
   }
 
   .recommendations {
@@ -357,7 +356,12 @@
     grid-template-columns: 33% 66%;
     grid-template-rows: 20px 1fr;
     margin-inline: 10px;
-    margin-block-start: 59px;
+    margin-block-start: 76px;
+  }
+
+  .recommendations > .card__list {
+    margin-block-start: 5px;
+    row-gap: 19px;
   }
 
    .card__list {
@@ -374,7 +378,7 @@
 
   .picture__content {
     margin-inline: 10px;
-    margin-block-start: 56px;
+    margin-block-start: 80px;
   }
 
   .picture__container {
@@ -411,6 +415,11 @@
 }
  
 @media (width >= 1024px) {
+
+  .concentration {
+    margin-block-start: 17px
+  }
+
   .focus > .card__list {
     display: grid;
     margin-block-start: 0;
@@ -423,17 +432,17 @@
   }
 
   .focus {
-    margin-block-start: 53px;
+    margin-block-start: 78px;
     margin-inline: 10px;
   }
 
   .recommendations {
-    margin-block-start: 52px;
+    margin-block-start: 82px;
     grid-template-columns: 33% 67%;
   }
 
   .recommendations > .card__list {
-    gap: 23px;
+    gap: 19px;
   }
 
   .recommendations > .card__title {
@@ -441,7 +450,7 @@
   }
 
   .picture__content {
-      margin-block-start: 54px;
+      margin-block-start: 81px;
   }
 }
 /*  */
@@ -451,7 +460,7 @@
   display: flex;
   justify-content: center;
   margin-block-start: 40px;
-  height: 100%;
+  height: max(668px, 100vh);
 }
 
 .footer__title {
@@ -481,6 +490,6 @@
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-block: 40vh;
+    margin-block: 44vh;
   }
 }
