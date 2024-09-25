@@ -227,7 +227,7 @@
   margin-block-start: 52px;
 }
 
-.card__list{
+.card__list {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -325,6 +325,7 @@
 
   .card__list {
     margin-block-start: 0;
+    gap: 22px;
   }
 
   .focus> .title {
@@ -365,10 +366,6 @@
 
   .recommendations > .title {
     grid-row: 1/3;
-  }
-
-   .card__list {
-    gap: 22px;
   }
 
   .recommendations > .card__title {
