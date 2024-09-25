@@ -7,10 +7,10 @@
   --accent-color: #ff0070;
   --accent-font: 'IBM Plex Mono';
   --main-color: #DB00FF;
-  --background-image: url(/images/cover-image-dark.png);
+  --hover-color: #FF007066;
+  --background-image: url(../images/cover-image-dark.png);
   --title-decor-color: #ff0070;
   --title-color: #000028;
-  --background-color: #000028;
   --text-color:  #F1B2CE;
   --decorated-color: #ff0070;
   --display: flex;
