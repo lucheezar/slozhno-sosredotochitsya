@@ -10,10 +10,11 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #ff0070;
+  --accent-font: 'IBM Plex Mono';
   --main-color: #DB00FF;
+  --hover-color: #FF007066;
   --background-image: url(../images/cover-image-dark.png);
   --title-decor-color: #ff0070;
-  --hover-color: #FF007066;
   --title-color: #000028;
   --text-color:  #F1B2CE;
   --decorated-color: #ff0070;

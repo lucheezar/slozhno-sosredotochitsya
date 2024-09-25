@@ -466,7 +466,7 @@
   line-height: 95.7px;
   text-align: left;
   color: var(--main-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 @media (width >= 768px) {
 
