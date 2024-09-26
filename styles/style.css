@@ -7,7 +7,6 @@
   background-size: cover;
   background-position: center;
   background-image: var(--background-image);
-  background-color: var(--background-colorg);
 }
 
 .header {
@@ -416,11 +415,6 @@
 
   .concentration {
     margin-block-start: 60px
-  }
-
-  .focus {
-    margin-block-start: 78px;
-    margin-inline: 10px;
   }
 
   .focus > .card__list {
